@@ -40,7 +40,7 @@ def dijkstra(graph, start, goal):
             if new_path < distances[neighbor]:
                 distances[neighbor] = new_path
                 
-    return distances[goal]
+    return distances[goal], len(visited)
 
 # A*
 def a_star(graph, start, goal, coordinates):
@@ -70,7 +70,7 @@ def a_star(graph, start, goal, coordinates):
             if distances[current_node] + weight < distances[neighbor]:
                 distances[neighbor] = distances[current_node] + weight
                 
-    return distances[goal]
+    return distances[goal], len(visited)
 
 # Evaluation
 print("POTSDAM EMERGENCY PATHFINDING TEST RESULTS\n")
