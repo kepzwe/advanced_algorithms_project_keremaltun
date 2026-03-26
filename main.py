@@ -40,6 +40,7 @@ def calculate_heuristic(node1, node2, coordinates):
 
     a = math.sin(dlat / 2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2 
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+    return R * c
     
 # Dijkstra
 def dijkstra(graph, start, goal):
